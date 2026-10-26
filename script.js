@@ -19,7 +19,7 @@
 
 function greet(name) {
   // Write your code here
-
+  return "Hello, " + name + "!"
 }
 
 
@@ -35,11 +35,10 @@ function greet(name) {
 // STEP 3: Return the new count value.
 //         First click → returns 1, second → returns 2, etc.
 
-
-
+let count = 0;
 function myFunc() {
   // Write your code here
-
+  return count++;
 }
 
 
@@ -57,6 +56,13 @@ function myFunc() {
 
 function getRandomNum(max) {
   // Write your code here
+  if(isNaN(max) || max<=0)
+  {
+    return 0;
+  } else
+  {
+    return Math.floor(Math.random()*max)+1;
+  }
 
 }
 
@@ -70,7 +76,13 @@ function getRandomNum(max) {
 
 function myAdder(x, y) {
   // Write your code here
-
+  if(isNaN(x) || isNaN(y))
+  {
+    return 0;
+  }else
+  {
+    return x+y;
+  }
 }
 
 
@@ -88,7 +100,7 @@ function myAdder(x, y) {
 
 function distance(x1, y1, x2, y2) {
   // Write your code here
-
+  return Math.sqrt((x2-x1)**2 + (y2-y1)**2).toFixed(2);
 }
 
 
@@ -103,7 +115,7 @@ function distance(x1, y1, x2, y2) {
 
 function tipCalc(bill, tipPercent) {
   // Write your code here
-
+  return (bill*(tipPercent/100) + bill).toFixed(2);
 }
 
 
